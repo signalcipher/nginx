@@ -1,15 +1,3 @@
-html, body {
-    height: 100%;
-    margin: 0;
-    padding: 0;
-}
-
-flowise-fullchatbot {
-    height: 100%;
-    width: 100%;
-    display: block;
-}
-
 .prose :where(strong):not(:where([class~=not-prose], [class~=not-prose] *)) {
     color: #abe7ff;
     font-weight: 600;
