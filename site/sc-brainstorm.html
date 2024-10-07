@@ -1,7 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-     <link rel="stylesheet" href="style.css">
+     <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        flowise-fullchatbot {
+            height: 100%;
+            width: 100%;
+            display: block;
+        }
+
+        .prose :where(strong):not(:where([class~=not-prose], [class~=not-prose] *)) {
+            color: #abe7ff;
+            font-weight: 600;
+        }
+    </style>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SynapseIQ Chat</title>
