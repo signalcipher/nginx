@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SynapseIQ Chat</title>
+</head>
+<body style="margin: 0">
+    <script type="module">
+        import Chatbot from 'https://synapse-iq.up.railway.app/web.js'; // Must be 'your-proxy-server-url/web.js'
+        Chatbot.init({
+          chatflowid: '60bf210f-b7af-4b42-aed5-1bd2433751ea', // Must match an identifier from your .env
+          apiHost: 'https://synapse-iq.up.railway.app', // Must match the URL of your proxy server
+          chatflowConfig: {
+            // ...
+          },
+        });
+      </script>
+</body>
+</html>
