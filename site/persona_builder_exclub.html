@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SynapseIQ Chat</title>
+</head>
+<body style="margin: 0">
+    <flowise-fullchatbot></flowise-fullchatbot>
+    <script type="module">
+        import Chatbot from "https://cdn.jsdelivr.net/npm/flowise-embed/dist/web.js";
+        Chatbot.initFull({
+            chatflowid: "da0f88b3-68f1-44a7-a9b6-35841fd09937",
+            apiHost: "https://synapse-iq.up.railway.app",
+            theme: {
+                button: {
+                 backgroundColor: '#ff6e27' },
+                chatWindow: {
+                    showTitle: true,
+                    title: 'Persona Builder',
+                    showAgentMessages: false,
+                    welcomeMessage: 'Welcome! I am here to guide you in creating a customized AI persona that aligns perfectly with your unique style, needs, and goals.',
+                    errorMessage: 'This is a custom error message',
+                    backgroundColor: "#d8d8d8",
+                    backgroundImage: 'enter image path or link',
+                    // height: 700,
+                    // width: 400,
+                    fontSize: 16,
+                    starterPromptFontSize: 16,
+                    clearChatOnReload: false,
+                    botMessage: {
+                        backgroundColor: "#fffcf9",
+                        textColor: "#000000",
+                        showAvatar: true,
+                        avatarSrc: "https://raw.githubusercontent.com/signalcipher/brand/refs/heads/main/sc-logo-white.jpg",
+                    },
+                    userMessage: {
+                        backgroundColor: "#8000ff",
+                        textColor: "#ffffff",
+                        showAvatar: true,
+                        avatarSrc: "https://raw.githubusercontent.com/zahidkhawaja/langchain-chat-nextjs/main/public/usericon.png",
+                    },
+                    textInput: {
+                        placeholder: 'Click "Lets Begin!" to get started.',
+                        backgroundColor: '#ffffff',
+                        textColor: '#303235',
+                        sendButtonColor: '#333333',
+                        maxChars: 8096,
+                        maxCharsWarningMessage: 'You exceeded the characters limit. Please input less than 8096 characters.',
+                        autoFocus: true,
+                        sendMessageSound: false,
+                        receiveMessageSound: false,
+                    },
+                    feedback: {
+                        color: '#303235',
+                    },
+                    footer: {
+                        textColor: '#303235',
+                        text: 'Powered by',
+                        company: 'SynapseIQ',
+                        companyLink: 'https://www.signalandcipher.com',
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>
