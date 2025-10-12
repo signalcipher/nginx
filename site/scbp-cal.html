@@ -15,7 +15,7 @@
 
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
             min-height: 100vh;
             padding: 20px;
         }
@@ -26,8 +26,6 @@
 
         body.iframe-mode {
             background: transparent !important;
-
-
         }
 
         body.iframe-mode.header {
@@ -35,7 +33,7 @@
         }
 
         body.iframe-mode .container {
-            background: white;
+            background: #1f1f1f;
             box-shadow: none;
             border-radius: 0;
         }
@@ -43,14 +41,15 @@
         .container {
             max-width: 700px;
             margin: 0 auto;
-            background: white;
+            background: #1f1f1f;
             border-radius: 12px;
-            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
             overflow: hidden;
+            border: 1px solid #333;
         }
 
         .header {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #ff6b35 0%, #f7931e 100%);
             color: white;
             padding: 30px;
             text-align: center;
@@ -82,21 +81,24 @@
             display: block;
             margin-bottom: 8px;
             font-weight: 500;
-            color: #374151;
+            color: #e5e5e5;
         }
 
         .form-group input {
             width: 100%;
             padding: 12px 16px;
-            border: 2px solid #e5e7eb;
+            border: 2px solid #404040;
             border-radius: 8px;
             font-size: 16px;
             transition: border-color 0.2s;
+            background: #2a2a2a;
+            color: #e5e5e5;
         }
 
         .form-group input:focus {
             outline: none;
-            border-color: #667eea;
+            border-color: #ff6b35;
+            background: #333;
         }
 
         body.teal-theme .form-group input:focus {
@@ -123,19 +125,20 @@
 
         .time-slot {
             padding: 12px 16px;
-            border: 2px solid #e5e7eb;
+            border: 2px solid #404040;
             border-radius: 8px;
             text-align: center;
             cursor: pointer;
             transition: all 0.2s;
-            background: white;
+            background: #2a2a2a;
             font-size: 14px;
             font-weight: 500;
+            color: #e5e5e5;
         }
 
         .time-slot:hover {
-            border-color: #667eea;
-            background: #f8fafc;
+            border-color: #ff6b35;
+            background: #333;
         }
 
         body.teal-theme .time-slot:hover {
@@ -143,8 +146,8 @@
         }
 
         .time-slot.selected {
-            border-color: #667eea;
-            background: #667eea;
+            border-color: #ff6b35;
+            background: #ff6b35;
             color: white;
         }
 
@@ -154,33 +157,33 @@
         }
 
         .time-slot.disabled {
-            background: #f3f4f6;
-            color: #9ca3af;
+            background: #252525;
+            color: #666;
             cursor: not-allowed;
-            border-color: #d1d5db;
+            border-color: #333;
         }
 
         .time-slot.disabled:hover {
-            border-color: #d1d5db;
-            background: #f3f4f6;
+            border-color: #333;
+            background: #252525;
         }
 
         .time-slot.booked {
-            background: #fef2f2;
-            color: #dc2626;
-            border-color: #fecaca;
+            background: #3a1f1f;
+            color: #ff6b6b;
+            border-color: #5a2f2f;
             cursor: not-allowed;
         }
 
         .time-slot.booked:hover {
-            border-color: #fecaca;
-            background: #fef2f2;
+            border-color: #5a2f2f;
+            background: #3a1f1f;
         }
 
         .btn {
             width: 100%;
             padding: 14px 20px;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #ff6b35 0%, #f7931e 100%);
             color: white;
             border: none;
             border-radius: 8px;
@@ -233,7 +236,7 @@
         }
 
         .toast.success {
-            background: #059669;
+            background: #ff6b35;
         }
 
         body.teal-theme .toast.success {
@@ -265,18 +268,18 @@
         }
 
         .loading .time-slot {
-            background: #f3f4f6;
-            color: #9ca3af;
+            background: #252525;
+            color: #666;
         }
 
         .business-hours {
             margin-top: 20px;
             padding: 15px;
-            background: #eff6ff;
-            border: 1px solid #bfdbfe;
+            background: #2a2a2a;
+            border: 1px solid #404040;
             border-radius: 8px;
             font-size: 14px;
-            color: #1e40af;
+            color: #ff9f66;
         }
 
         body.teal-theme .business-hours {
@@ -288,6 +291,11 @@
         .business-hours h4 {
             margin-bottom: 8px;
             font-size: 16px;
+            color: #ff6b35;
+        }
+
+        body.teal-theme .business-hours h4 {
+            color: #0f766e;
         }
 
         .business-hours ul {
@@ -296,12 +304,17 @@
 
         .business-hours li {
             margin-bottom: 4px;
+            color: #e5e5e5;
+        }
+
+        body.teal-theme .business-hours li {
+            color: #0f766e;
         }
 
         .test-scenarios {
             margin-top: 30px;
             padding: 20px;
-            background: #f8fafc;
+            background: #2a2a2a;
             border-radius: 8px;
         }
 
@@ -311,33 +324,34 @@
 
         .test-scenarios h3 {
             margin-bottom: 15px;
-            color: #374151;
+            color: #e5e5e5;
         }
 
         .scenario-btn {
             display: inline-block;
             margin: 5px;
             padding: 8px 12px;
-            background: #e5e7eb;
+            background: #404040;
             border: none;
             border-radius: 6px;
             font-size: 12px;
             cursor: pointer;
             transition: background-color 0.2s;
+            color: #e5e5e5;
         }
 
         .scenario-btn:hover {
-            background: #d1d5db;
+            background: #505050;
         }
 
         .scenario-btn.success {
-            background: #dcfce7;
-            color: #166534;
+            background: #2d4a2f;
+            color: #7aff7a;
         }
 
         .scenario-btn.error {
-            background: #fef2f2;
-            color: #dc2626;
+            background: #3a1f1f;
+            color: #ff6b6b;
         }
 
         /* Toggle Switch */
@@ -353,14 +367,14 @@
             position: relative;
             width: 60px;
             height: 30px;
-            background: #e5e7eb;
+            background: #404040;
             border-radius: 15px;
             cursor: pointer;
             transition: background-color 0.3s;
         }
 
         .toggle-switch.active {
-            background: #667eea;
+            background: #ff6b35;
         }
 
         body.teal-theme .toggle-switch.active {
@@ -376,7 +390,7 @@
             background: white;
             border-radius: 50%;
             transition: transform 0.3s;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
         }
 
         .toggle-switch.active .toggle-knob {
@@ -385,12 +399,12 @@
 
         .toggle-label {
             font-weight: 500;
-            color: #374151;
+            color: #999;
             font-size: 16px;
         }
 
         .toggle-label.active {
-            color: #667eea;
+            color: #ff6b35;
         }
 
         body.teal-theme .toggle-label.active {
@@ -412,7 +426,7 @@
             flex: 1;
             padding: 20px;
             overflow-y: auto;
-            background: #f8fafc;
+            background: #2a2a2a;
             border-radius: 8px;
             margin-bottom: 20px;
             max-height: 400px;
@@ -443,7 +457,7 @@
         }
 
         .chat-message.user .avatar {
-            background: #667eea;
+            background: #ff6b35;
         }
 
         body.teal-theme .chat-message.user .avatar {
@@ -451,7 +465,7 @@
         }
 
         .chat-message.bot .avatar {
-            background: #6b7280;
+            background: #505050;
         }
 
         .chat-bubble {
@@ -462,7 +476,7 @@
         }
 
         .chat-message.user .chat-bubble {
-            background: #667eea;
+            background: #ff6b35;
             color: white;
             border-bottom-right-radius: 6px;
         }
@@ -472,9 +486,9 @@
         }
 
         .chat-message.bot .chat-bubble {
-            background: white;
-            color: #374151;
-            border: 1px solid #e5e7eb;
+            background: #333;
+            color: #e5e5e5;
+            border: 1px solid #404040;
             border-bottom-left-radius: 6px;
         }
 
@@ -486,17 +500,19 @@
         .chat-input {
             flex: 1;
             padding: 12px 16px;
-            border: 2px solid #e5e7eb;
+            border: 2px solid #404040;
             border-radius: 25px;
             font-size: 16px;
             outline: none;
             resize: none;
             min-height: 44px;
             max-height: 120px;
+            background: #2a2a2a;
+            color: #e5e5e5;
         }
 
         .chat-input:focus {
-            border-color: #667eea;
+            border-color: #ff6b35;
         }
 
         body.teal-theme .chat-input:focus {
@@ -508,7 +524,7 @@
             height: 44px;
             border: none;
             border-radius: 50%;
-            background: #667eea;
+            background: #ff6b35;
             color: white;
             cursor: pointer;
             display: flex;
@@ -535,12 +551,12 @@
             display: none;
             padding: 12px 16px;
             margin-bottom: 15px;
-            background: white;
-            border: 1px solid #e5e7eb;
+            background: #333;
+            border: 1px solid #404040;
             border-radius: 18px;
             border-bottom-left-radius: 6px;
             max-width: 80%;
-            color: #6b7280;
+            color: #999;
         }
 
         .typing-indicator.show {
@@ -555,7 +571,7 @@
         .typing-dot {
             width: 6px;
             height: 6px;
-            background: #9ca3af;
+            background: #666;
             border-radius: 50%;
             animation: typing 1.4s infinite;
         }
@@ -607,7 +623,7 @@
         }
 
         .chat-bubble a {
-            color: #2563eb;
+            color: #ff9f66;
             text-decoration: none;
         }
 
@@ -626,7 +642,7 @@
         }
 
         .chat-bubble code {
-            background: rgba(0, 0, 0, 0.1);
+            background: rgba(255, 255, 255, 0.1);
             padding: 2px 4px;
             border-radius: 3px;
             font-family: 'Courier New', monospace;
@@ -634,7 +650,7 @@
         }
 
         .chat-bubble pre {
-            background: rgba(0, 0, 0, 0.05);
+            background: rgba(255, 255, 255, 0.05);
             padding: 8px;
             border-radius: 6px;
             overflow-x: auto;
@@ -642,10 +658,10 @@
         }
 
         .chat-bubble blockquote {
-            border-left: 3px solid #e5e7eb;
+            border-left: 3px solid #404040;
             padding-left: 12px;
             margin: 8px 0;
-            color: #6b7280;
+            color: #999;
         }
     </style>
 </head>
@@ -1038,13 +1054,13 @@
             selectedDate.setHours(0, 0, 0, 0);
 
             if (selectedDate < today) {
-                timeSlotsGrid.innerHTML = '<div style="text-align: center; padding: 20px; color: #dc2626; font-weight: 500;"><i class="fas fa-exclamation-triangle" style="margin-right: 8px;"></i>Cannot book appointments for dates earlier than today</div>';
+                timeSlotsGrid.innerHTML = '<div style="text-align: center; padding: 20px; color: #ff6b6b; font-weight: 500;"><i class="fas fa-exclamation-triangle" style="margin-right: 8px;"></i>Cannot book appointments for dates earlier than today</div>';
                 submitBtn.disabled = true;
                 return;
             }
 
             // Show loading state
-            timeSlotsGrid.innerHTML = '<div style="text-align: center; padding: 20px; color: #6b7280;">Loading time slots...</div>';
+            timeSlotsGrid.innerHTML = '<div style="text-align: center; padding: 20px; color: #999;">Loading time slots...</div>';
             submitBtn.disabled = true;
 
             // Check for holidays and get available slots
@@ -1061,13 +1077,13 @@
 
                     if (data.success) {
                         if (data.isHoliday) {
-                            timeSlotsGrid.innerHTML = `<div style="text-align: center; padding: 20px; color: #dc2626;">${data.holidayMessage}</div>`;
+                            timeSlotsGrid.innerHTML = `<div style="text-align: center; padding: 20px; color: #ff6b6b;">${data.holidayMessage}</div>`;
                             submitBtn.disabled = true;
                             return;
                         }
 
                         if (data.isWeekend) {
-                            timeSlotsGrid.innerHTML = `<div style="text-align: center; padding: 20px; color: #dc2626;">${data.weekendMessage}</div>`;
+                            timeSlotsGrid.innerHTML = `<div style="text-align: center; padding: 20px; color: #ff6b6b;">${data.weekendMessage}</div>`;
                             submitBtn.disabled = true;
                             return;
                         }
@@ -1077,13 +1093,13 @@
                         loadTimeSlots(availableSlots);
                     } else {
                         showToast(data.error || 'Failed to check date availability', 'error');
-                        timeSlotsGrid.innerHTML = '<div style="text-align: center; padding: 20px; color: #dc2626;">Error loading time slots</div>';
+                        timeSlotsGrid.innerHTML = '<div style="text-align: center; padding: 20px; color: #ff6b6b;">Error loading time slots</div>';
                     }
                 })
                 .catch(error => {
                     console.error('Error checking date:', error);
                     showToast('Error checking date availability', 'error');
-                    timeSlotsGrid.innerHTML = '<div style="text-align: center; padding: 20px; color: #dc2626;">Error loading time slots</div>';
+                    timeSlotsGrid.innerHTML = '<div style="text-align: center; padding: 20px; color: #ff6b6b;">Error loading time slots</div>';
                 });
         }
 
@@ -1092,7 +1108,7 @@
             const submitBtn = document.getElementById('submit-btn');
 
             if (!slots || slots.length === 0) {
-                timeSlotsGrid.innerHTML = '<div style="text-align: center; padding: 20px; color: #6b7280;">No time slots available for this date</div>';
+                timeSlotsGrid.innerHTML = '<div style="text-align: center; padding: 20px; color: #999;">No time slots available for this date</div>';
                 submitBtn.disabled = true;
                 return;
             }
