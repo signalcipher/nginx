@@ -750,29 +750,6 @@
                 </ul>
             </div>
 
-            <div class="test-scenarios">
-                <h3><i class="fas fa-flask"></i> Quick Test Scenarios</h3>
-                <p>Click any button to auto-fill the form with test data:</p>
-
-                <button class="scenario-btn success" onclick="fillForm('valid')">
-                    ✅ Valid Booking
-                </button>
-
-                <button class="scenario-btn error" onclick="fillForm('weekend')">
-                    ❌ Weekend Booking
-                </button>
-
-                <button class="scenario-btn error" onclick="fillForm('invalid-email')">
-                    ❌ Invalid Email
-                </button>
-
-                <button class="scenario-btn error" onclick="fillForm('missing-fields')">
-                    ❌ Missing Fields
-                </button>
-            </div>
-        </div>
-    </div>
-
     <script>
         const MAIN_URL_MAKE_BOOKING = 'https://sc-core.up.railway.app/webhook/make-booking';
         const MAIN_URL_CHECK_BOOKING = 'https://sc-core.up.railway.app/webhook/check-booking-date';
@@ -993,34 +970,6 @@
             textarea.style.height = 'auto';
             textarea.style.height = Math.min(textarea.scrollHeight, 120) + 'px';
         }
-
-        // Test data scenarios
-        const testScenarios = {
-            valid: {
-                name: 'John Doe',
-                email: 'john@example.com',
-                phone: '+60123456789',
-                date: getNextWeekday()
-            },
-            weekend: {
-                name: 'Weekend User',
-                email: 'weekend@example.com',
-                phone: '+60123456790',
-                date: getNextWeekend()
-            },
-            'invalid-email': {
-                name: 'Bad Email User',
-                email: 'invalid-email',
-                phone: '+60123456793',
-                date: getNextWeekday()
-            },
-            'missing-fields': {
-                name: '',
-                email: '',
-                phone: '',
-                date: ''
-            }
-        };
 
         function getNextWeekday() {
             const today = new Date();
